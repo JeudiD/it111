@@ -20,7 +20,7 @@ public class GallonLiters {
 
                 lit = (gal * 3.78541);
 
-                System.out.printf("%.2f Liters = %.2f Gallons%n", lit, gal);
+                System.out.printf("%.2f Liters = %.1f Gallons%n", lit, gal);
 
                 count++;
 
