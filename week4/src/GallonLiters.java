@@ -16,11 +16,11 @@ public class GallonLiters {
         double lit, gal;
         int count = 0;
 
-            for (lit = 1; lit <=100; lit = lit+4) {
+            for (gal = 1; gal <=100; gal = gal+4) {
 
-                gal = (lit * 3.78541);
+                lit = (gal * 3.78541);
 
-                System.out.printf("%.2f Liters = %.2f Gallons%n", gal, lit);
+                System.out.printf("%.2f Liters = %.2f Gallons%n", lit, gal);
 
                 count++;
 
