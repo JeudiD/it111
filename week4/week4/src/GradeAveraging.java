@@ -14,7 +14,7 @@ public class GradeAveraging {
 
         while (counter <= 5) {
 
-            System.out.println("Please enter your" +counter+ " numberical grade");
+            System.out.println("Please enter your " +counter+ " numberical grade");
 
             grade = input.nextInt();
             total += grade;
