@@ -68,11 +68,25 @@ public class dailySpecials {
         int quantity = input.nextInt();
         double total = quantity * price;
 
+        switch (quantity) {
 
-        System.out.println(quantity+ " " +coffee+ " have been ordered totalling");
-        System.out.printf("$%.2f dollars\n", total);
+            case 0 -> {
+                System.out.print("Looks like you dont like " +coffee+ "!  So sad!!!");
 
+            }
 
+            case 1 -> {
+                System.out.print("Looks like you will be ordering only " +quantity+ " " +coffee+ " today!");
+
+            }
+
+            default -> {
+
+            System.out.println(quantity + " " + coffee + " have been ordered totalling");
+            System.out.printf("$%.2f dollars\n", total);
+            }
+
+        }
 
 
 
