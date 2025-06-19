@@ -100,23 +100,42 @@ public class dailySpecials {
 
         int quantity = input.nextInt();
         double total = quantity * price;
+        double discount1 = total * 0.10;
+        double discount2 = total * 0.20;
 
-        switch (quantity) {
 
-            case 0 -> {
-                System.out.print("Looks like you dont like " +coffee+ "!  So sad!!!");
+        if (quantity >= 5 && quantity <= 9) {
 
-            }
+            System.out.printf("Looks like you qualify for our group discount! Your regular price is $%.2f dollars!\n", total);
+            System.out.print("But the discount drops you down to ");
+            System.out.printf("$%.2f dollars\n", total - discount1);
 
-            case 1 -> {
-                System.out.print("Looks like you will be ordering only " +quantity+ " " +coffee+ " today!");
+        } else if (quantity >= 10) {
 
-            }
+            System.out.printf("Looks like you qualify for our big group discount! Your regular price is $%.2f dollars!\n", total);
+            System.out.printf("But the discount drops you down to $%.2f dollars\n", total - discount2);
 
-            default -> {
+        } else {
 
-            System.out.println(quantity + " " + coffee + " have been ordered totalling");
-            System.out.printf("$%.2f dollars\n", total);
+            switch (quantity) {
+
+                case 0 -> {
+                    System.out.print("Looks like you don't like " + coffee + "!  So sad!!!");
+
+                }
+
+                case 1 -> {
+                    System.out.println("Looks like you will be ordering only " + quantity + " " + coffee + " today, so your total will be ");
+                    System.out.printf("$%.2f dollars\n", total);
+
+                }
+
+                default -> {
+
+                    System.out.println("Looks like you ordered " + quantity + " " + coffee + "s so your total will be ");
+                    System.out.printf("$%.2f dollars\n", total);
+                }
+
             }
 
         }
